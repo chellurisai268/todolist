@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Todo =function(){
+                function abc(){
+                    var a=document.getElementById("cd").value
+                    setTd([...td,a])
+                }
+                
+            
+                var [td,setTd]=React.useState([
+                    "sai",
+                    "ayyappa",
+                    "anil",
+                    "arun"
+                ])
+                return(
+                    <div>
+                        <input type="text" id="cd"/>
+                        <button onClick={()=>{abc()}}>Add</button>
+                        <h1>{td.map((k)=>{
+                            return <li>{k}</li>
+                        })}</h1>
+                        </div>
+                )
+               
+            
+            }
+            ReactDOM.render(<Todo></Todo>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>
